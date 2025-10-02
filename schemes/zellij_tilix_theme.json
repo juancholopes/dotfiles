@@ -1,0 +1,30 @@
+{
+  "name": "OldWorld Theme",
+  "comment": "Dark theme inspired by OldWorld theme configuration color palette - Soft pastels with modern aesthetics",
+  "use-theme-colors": false,
+  "foreground-color": "#C9C7CD",
+  "background-color": "#161617",
+  "highlight-foreground-color": "#F5F3F9",
+  "highlight-background-color": "#2A2A2B",
+  "cursor-foreground-color": "#161617",
+  "cursor-background-color": "#E29ECA",
+  "palette": [
+    "#161617",
+    "#EA83A5",
+    "#85B5BA",
+    "#E29ECA",
+    "#92A2D5",
+    "#C9C7CD",
+    "#85B5BA",
+    "#C9C7CD",
+    "#2A2A2B",
+    "#FF9DB4",
+    "#9BC7CC",
+    "#F2B8DD",
+    "#A8B8E5",
+    "#D9D7DD",
+    "#9BC7CC",
+    "#F5F3F9"
+  ]
+}
+
