@@ -2,9 +2,6 @@
 # Estrategia de autosugerencia (opcional)
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-# Aceptar autosugerencia con Ctrl+Right Arrow
-bindkey '^[[1;5C' forward-word
-
 # ===== TU CONFIGURACIÓN ACTUALIZADA =====
 export PATH="$HOME/.volta/bin:$HOME/.cargo/bin:$PATH"
 if [[ $- == *i* ]]; then
