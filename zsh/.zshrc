@@ -24,6 +24,12 @@ export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_DEFAULT_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exlude .git"
 
+# WM_VAR="/$ZELLIJ"
+# # change with ZELLIJ
+# WM_CMD="zellij"
+# # change with zellij
+
+# Función para iniciar el WM si es necesari
 function start_if_needed() {
     if [[ $- == *i* ]] && [[ -z "${WM_VAR#/}" ]] && [[ -t 1 ]]; then
         exec $WM_CMD
@@ -40,9 +46,14 @@ plugins=(
   command-not-found
 )
 
+
+autoload -Uz compinit
+compinit
+
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense'
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 source <(carapace _carapace)
+
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
@@ -62,13 +73,15 @@ function zs() {
 
 export PATH="/home/juancho/.local/bin:$PATH"
 export PATH=/home/juancho/.opencode/bin:$PATH
+export PATH="$HOME/.opencode/bin:$PATH"
+
 
 [ -s "/home/juancho/.bun/_bun" ] && source "/home/juancho/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# Mode VIM 
-bindkey -v
+# # Mode VIM 
+# bindkey -v
 
 # Ignore comments
 setopt INTERACTIVE_COMMENTS
