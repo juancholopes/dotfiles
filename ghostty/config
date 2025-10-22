@@ -1,0 +1,53 @@
+#background-opacity = 0.95
+background-blur-radius = 20
+gtk-tabs-location = hidden
+window-decoration = true
+window-theme = ghostty 
+gtk-titlebar = false 
+
+# Fuentes
+font-family = AdwaitaMono Nerd Font
+font-family-italic = DankMono Nerd Font
+font-family-bold = AdwaitaMono Nerd Font
+font-family-bold-italic = DankMono Nerd Font
+font-size = 16
+
+# Configuración de ventana - TAMAÑO FIJO
+window-height = 35
+window-width = 130
+window-save-state = always
+window-position-x = -60
+window-position-y = -20
+
+
+### Mac Alt Fix
+macos-option-as-alt = left
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+
+### KeyBindings
+# Split Management
+keybind = alt+v=new_split:right
+keybind = alt+d=new_split:down
+keybind = alt+q=close_surface
+
+# Resize Split
+keybind = alt+j=resize_split:up,10
+keybind = alt+k=resize_split:down,10
+keybind = alt+h=resize_split:left,10
+keybind = alt+l=resize_split:right,10
+
+# Navigation
+keybind = alt+k=goto_split:up
+keybind = alt+j=goto_split:down
+keybind = alt+h=goto_split:left
+keybind = alt+l=goto_split:right
+keybind = ctrl+tab=next_tab
+
+# Miscellaneous
+keybind = cmd+k=clear_screen
+keybind = alt+s=write_screen_file:paste
+
+# Tema y cursor
+cursor-style = block
+theme = kanagawa-wave.conf
