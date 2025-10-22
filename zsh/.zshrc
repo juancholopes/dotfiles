@@ -11,6 +11,10 @@ eval "$(dircolors -b)"
 alias ls='ls --color=auto'
 
 # Cargar plugins de zsh
+zstyle ':autocomplete:*' delay 0.4          # retardo de 0.4s
+zstyle ':autocomplete:*' min-input 2        # mínimo 2 caracteres
+zstyle ':autocomplete:*' ignored-input '..##' # ignorar cuando escribes '..'
+
 source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -62,10 +66,11 @@ eval "$(starship init zsh)"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 start_if_needed
 
+#Alias
 alias conserve-on='echo 1 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/*/conservation_mode'
 alias conserve-off='echo 0 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/*/conservation_mode'
 alias conserve-status='cat /sys/bus/platform/drivers/ideapad_acpi/*/conservation_mode'
-alias compass="flatpak run com.mongodb.Compass"
+alias lz=lazygit
 
 function zs() {
   z "$@" ; ls 
@@ -85,4 +90,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Ignore comments
 setopt INTERACTIVE_COMMENTS
+# SSH Agent via systemd
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
