@@ -61,11 +61,11 @@ return {
           vim.api.nvim_set_hl(0, "@comment", { italic = true })
 
           -- Funciones
-          -- vim.api.nvim_set_hl(0, "Function", { italic = true })
-          -- vim.api.nvim_set_hl(0, "@function", { italic = true })
-          -- vim.api.nvim_set_hl(0, "@function.call", { italic = true })
-          -- vim.api.nvim_set_hl(0, "@method", { italic = true })
-          -- vim.api.nvim_set_hl(0, "@method.call", { italic = true })
+          vim.api.nvim_set_hl(0, "Function", { italic = true })
+          vim.api.nvim_set_hl(0, "@function", { italic = true })
+          vim.api.nvim_set_hl(0, "@function.call", { italic = true })
+          vim.api.nvim_set_hl(0, "@method", { italic = true })
+          vim.api.nvim_set_hl(0, "@method.call", { italic = true })
           --
           -- Variables
           -- vim.api.nvim_set_hl(0, "Identifier", { italic = true })
@@ -161,7 +161,7 @@ return {
     {
       "LazyVim/LazyVim",
       opts = {
-        colorscheme = "gruvbox",
+        colorscheme = "oldworld",
       },
     },
   },

@@ -11,9 +11,9 @@ eval "$(dircolors -b)"
 alias ls='ls --color=auto'
 
 # Cargar plugins de zsh
-zstyle ':autocomplete:*' delay 0.4          # retardo de 0.4s
-zstyle ':autocomplete:*' min-input 2        # mínimo 2 caracteres
-zstyle ':autocomplete:*' ignored-input '..##' # ignorar cuando escribes '..'
+# zstyle ':autocomplete:*' delay 0.4          # retardo de 0.4s
+# zstyle ':autocomplete:*' min-input 2        # mínimo 2 caracteres
+# # zstyle ':autocomplete:*' ignored-input '..##' # ignorar cuando escribes '..'
 
 source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -43,7 +43,7 @@ function start_if_needed() {
 # alias
 alias fzfbat='fzf --preview="bat --theme=gruvbox-dark --color=always {}"'
 alias fzfnvim='nvim $(fzf --preview="bat --theme=gruvbox-dark --color=always {}")'
-alias zed="flatpak run dev.zed.Zed-Preview"
+alias nv=nvim
 
 #plugins
 plugins=(
@@ -85,11 +85,14 @@ export PATH="$HOME/.opencode/bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# # Mode VIM 
-# bindkey -v
+# Mode VIM 
+bindkey -v
 
 # Ignore comments
 setopt INTERACTIVE_COMMENTS
 # SSH Agent via systemd
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+export PATH="$HOME/.local/bin:$PATH"
+
 
