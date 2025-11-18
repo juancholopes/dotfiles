@@ -22,7 +22,7 @@ $time\
 [ ](fg:color_bg1)\
 $line_break$character"""
 
-palette = 'kanagawa_wave'
+palette = 'oldworld'
 
 [palettes.gruvbox_dark]
 color_fg0 = '#fbf1c7'
@@ -145,11 +145,12 @@ truncation_symbol = "…/"
 "Videos" = " "
 "Templates" = " "
 "Public" = " "
+"Projects" = "󰏗 "
 
 [git_branch]
 symbol = ""
 style = "bg:color_aqua"
-format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
+format = '[[ $smbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
 
 [git_status]
 style = "bg:color_aqua"
